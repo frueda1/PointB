@@ -19,6 +19,8 @@ const CdpPageView = (): JSX.Element => {
     sitecoreContext: { pageState, route, variantId },
   } = useSitecoreContext();
 
+  console.log('CDP');
+  
   /**
    * Creates a page view event using the Sitecore Engage SDK.
    */
