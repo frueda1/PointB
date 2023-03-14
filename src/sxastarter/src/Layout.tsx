@@ -10,6 +10,7 @@ import {
   Field,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import Scripts from 'src/Scripts';
+import Script from 'next/script';
 
 // Prefix public assets with a public URL to enable compatibility with Sitecore Experience Editor.
 // If you're not supporting the Experience Editor, you can remove this.
@@ -32,6 +33,7 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
 
   return (
     <>
+      <Script src="../scripts/cdpSettings.js" />
       <Scripts />
       <Head>
         <title>{fields?.Title?.value?.toString() || 'Page'}</title>
