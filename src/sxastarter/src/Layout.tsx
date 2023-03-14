@@ -33,7 +33,9 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
 
   return (
     <>
-      <Script src="../scripts/cdpSettings.js" />
+    
+      
+      <Script src= {`${publicUrl}/cdpSettings.js`}/>
       <Scripts />
       <Head>
         <title>{fields?.Title?.value?.toString() || 'Page'}</title>
