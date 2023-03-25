@@ -22,7 +22,7 @@ interface LayoutProps {
 
 interface RouteFields {
   [key: string]: unknown;
-  Title?: Field;
+  Title?: Field; 
 }
 
 const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
@@ -30,12 +30,20 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
   const fields = route?.fields as RouteFields;
   const isPageEditing = layoutData.sitecore.context.pageEditing;
   const mainClassPageEditing = isPageEditing ? 'editing-mode' : 'prod-mode';
+  console.log('layoutDataa',layoutData);
 
   return (
     <>
     
       
-      <Script src= {`${publicUrl}/cdpSettings.js`}/>
+      <Script src= {`${publicUrl}/cdpSettings.js`}
+      
+        onLoad={() => {
+          callMethod(layoutData.sitecore.route?.name);
+        } }
+
+      />
+      
       <Scripts />
       <Head>
         <title>{fields?.Title?.value?.toString() || 'Page'}</title>

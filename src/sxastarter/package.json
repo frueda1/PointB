@@ -4,7 +4,7 @@
   "version": "21.0.5",
   "private": true,
   "config": {
-    "appName": "sxastarter",
+    "appName": "PointB-dev1",
     "rootPlaceholders": [
       "jss-main"
     ],
