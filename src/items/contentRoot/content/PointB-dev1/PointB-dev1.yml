@@ -25,7 +25,7 @@ SharedFields:
     {ED6C4A9B-E3DC-413A-BEF6-337ABB7FD2C7}
 - ID: "2b2fe9fd-78a6-40eb-b9f9-28409d8d3700"
   Hint: SitemapMediaItems
-  Value: "{F79E99C7-0976-43D7-BE14-517ABF1E28D0}"
+  Value: "{07605116-442C-42D6-A01D-FF8007C4E5C4}"
 - ID: "33d9005e-1f71-415f-b107-53b965c3b037"
   Hint: SiteMediaLibrary
   Value: "{FF8213AB-190C-46DC-8286-4F3DFCF3AFE1}"
@@ -50,11 +50,11 @@ Languages:
         sitecore\frueda@oshyn.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "357ec006-365a-4c55-bf4f-ae9b51cb02f6"
+      Value: "683f5b2e-322e-4a5c-9fac-42f341aea475"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\frueda@oshyn.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230314T161924Z
+      Value: 20230325T005518Z

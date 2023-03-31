@@ -11,13 +11,13 @@ var _boxeverq = _boxeverq || [];
                 web_flow_config: { async: false, defer: false } // Customize the async and defer script loading attributes
             };
             // Import the Boxever JavaScript Library asynchronously
+            
             (function() {
                 var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
                 s.src = 'https://d1mj578wat5n4o.cloudfront.net/boxever-1.4.9.min.js';
                 var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
             })();
-
-
+        
             _boxeverq.push(() => {
                 // Create a "VIEW" event object
                 const viewEvent = {
@@ -43,19 +43,20 @@ var _boxeverq = _boxeverq || [];
                 console.log(`bid: ${Boxever.getID()}`);
             });
 
-            var callMethod = (page) => 
+            function callMethod (page)  
             {
-                window.alert('this is the page ' + page);
+                window.alert('this is the custom event for ' + page);
                 _boxeverq.push(() => {
                     // Create a "VIEW" event object
                     const viewEvent = {
                         browser_id: Boxever.getID(),
                         channel: "WEB",
-                        type: "VIEW",
+                        type: "pointb:SEARCH_CLICKED",
                         language: "EN",
                         currency: "USD",
                         page: page,
-                        pos: "pointb.com"
+                        pos: "pointb.com",
+                        showResults: "true"
     
                     };
     
@@ -72,3 +73,5 @@ var _boxeverq = _boxeverq || [];
                 });
 
             }
+
+            export { callMethod };

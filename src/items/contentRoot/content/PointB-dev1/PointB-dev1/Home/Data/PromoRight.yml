@@ -13,6 +13,9 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20230314T152248Z
@@ -31,15 +34,15 @@ Languages:
         sitecore\frueda@oshyn.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "967cae2a-baa6-4add-8974-43f4be8e06ca"
+      Value: "737d4037-754e-4776-a811-ad27a394fcf1"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\frueda@oshyn.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230314T152248Z
+      Value: 20230314T210239Z
     - ID: "f94b9858-c439-4291-863b-757b536c8b65"
       Hint: PromoIcon
       Value: |
-        <image mediaid="{7DC4262C-8DF4-4A34-9D65-ACD13F695168}" />
+        <image mediaid="234d55c1-08a1-4cf2-9665-ade1c5248900" />

@@ -10,7 +10,8 @@ import {
   Field,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import Scripts from 'src/Scripts';
-import Script from 'next/script';
+import { callMethod } from 'public/cdpSettings.js';
+
 
 // Prefix public assets with a public URL to enable compatibility with Sitecore Experience Editor.
 // If you're not supporting the Experience Editor, you can remove this.
@@ -25,25 +26,31 @@ interface RouteFields {
   Title?: Field; 
 }
 
+
 const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
   const { route } = layoutData.sitecore;
   const fields = route?.fields as RouteFields;
   const isPageEditing = layoutData.sitecore.context.pageEditing;
   const mainClassPageEditing = isPageEditing ? 'editing-mode' : 'prod-mode';
   console.log('layoutDataa',layoutData);
-
+  
+  const handleClick = (e: any) => {
+    console.log('Free pizza!');
+      console.log(e);
+      callMethod(layoutData.sitecore.route?.name);
+  
+  }
   return (
     <>
     
       
-      <Script src= {`${publicUrl}/cdpSettings.js`}
-      
-        onLoad={() => {
-          callMethod(layoutData.sitecore.route?.name);
-        } }
+      {/* <Script src= {`${publicUrl}/cdpSettings.js`} 
 
-      />
       
+         //onLoad={() => callMethod(layoutData.sitecore.route?.name)    }
+
+      /> */}
+
       <Scripts />
       <Head>
         <title>{fields?.Title?.value?.toString() || 'Page'}</title>
@@ -51,11 +58,12 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
       </Head>
 
       {/* root placeholder for the app, which we add components to using route data */}
-      <div className={mainClassPageEditing}>
+      <button onClick={handleClick}>Search</button>
+      <div className={mainClassPageEditing} >
         <header>
           <div id="header">{route && <Placeholder name="headless-header" rendering={route} />}</div>
         </header>
-        <main>
+        <main>          
           <div id="content">{route && <Placeholder name="headless-main" rendering={route} />}</div>
         </main>
         <footer>

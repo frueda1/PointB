@@ -13,6 +13,9 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20230314T152248Z
@@ -26,14 +29,14 @@ Languages:
         sitecore\frueda@oshyn.com
     - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
       Hint: Text
-      Value: <h4>Providing wholesale product basics to the best skate brands</h4>
+      Value: "<h4>Your partner is solving the world's greatest challenges!</h4>"
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "36400d7c-5d5f-4afa-b7f2-4c790d8613e9"
+      Value: "15adcc4b-6100-4c66-8725-45b3389a3a4d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\frueda@oshyn.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230314T152248Z
+      Value: 20230314T205754Z

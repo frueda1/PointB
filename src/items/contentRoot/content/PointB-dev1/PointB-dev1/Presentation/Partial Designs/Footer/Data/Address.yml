@@ -13,6 +13,9 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20230314T152245Z
@@ -27,20 +30,14 @@ Languages:
     - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
       Hint: Text
       Value: |
-        <span id="docs-internal-guid-17237c97-7fff-f61d-384b-b66bc74de880"></span>
-        <p><span>Skate Park</span></p>
-        <p><span>12 Forever Street</span></p>
-        <p><span>A99 B44</span></p>
-        <p><span>The Nation of Skate</span></p>
-        <p><span>Made by <a href="https://www.sitecore.com/">Sitecore</a></span></p>
-        <div><span><br /></span></div>
+        <p>PointB</p><p><strong style="background-color: rgb(0, 66, 97);">100 Congress Avenue, Suite 2000&nbsp;Austin,&nbsp;TX&nbsp;78701</strong></p><p><br /></p><p><br /></p><p>Made by <a href="https://www.sitecore.com/" rel="noopener noreferrer">Sitecore</a></p><p><br /></p>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ed405dd7-5eea-4bda-8e1d-9ee20561dc83"
+      Value: "96e45f11-4d92-46cb-93cd-8e82fc07bcaf"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\frueda@oshyn.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230314T152245Z
+      Value: 20230314T205628Z
