@@ -60,7 +60,8 @@ const CdpPageView = (): JSX.Element => {
     // Do not create events if disabled (e.g. we don't have consent)
     if (disabled()) {
       return;
-    }
+    }    
+
     const language = route.itemLanguage || config.defaultLanguage;
     const pageVariantId = CdpHelper.getPageVariantId(route.itemId, language, variantId as string);
     createPageView(route.name, language, pageVariantId);
