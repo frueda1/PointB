@@ -3,7 +3,8 @@ import middleware from 'lib/middleware';
 
 
 // eslint-disable-next-line
-export default async function (req: NextRequest, ev: NextFetchEvent) {
+export default async function (req: NextRequest, ev: NextFetchEvent) {  
+  console.log("MSW")
    return middleware(req, ev);
 }
 

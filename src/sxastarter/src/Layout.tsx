@@ -15,6 +15,7 @@ import Script from "next/script";
 import { useEffect } from "react";
 import { init } from "@sitecore/engage";
 
+
 // Prefix public assets with a public URL to enable compatibility with Sitecore Experience Editor.
 // If you're not supporting the Experience Editor, you can remove this.
 const publicUrl = getPublicUrl();
@@ -32,30 +33,31 @@ const engageSettings = {
   clientKey: "sndbxus09k4lf0wq2f6b9p25ckpuqo8i",
   targetURL: "https://api-engage-us.sitecorecloud.io", //"https://api-us.boxever.com"
   pointOfSale: "pointb.com",
-  cookieDomain: "",
-  cookieExpiryDays: 365,
+  // cookieDomain: "localhost",
+  // cookieExpiryDays: 365,
   forceServerCookieMode: false,
   includeUTMParameters: true,
-  webPersonalization: true,
+  webPersonalization: "true",
   web_flow_target: 'https://d35vb5cccm4xzp.cloudfront.net'
 };
 
 const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
 
-  const loadEngage = async () => {
-    // Load Engage API
-    const engage = await init(engageSettings);  
+  // const loadEngage = async () => {
+  //   // Load Engage API
+  //   const engage = await init(engageSettings);  
   
-    // Send VIEW events
-    engage.pageView({
-      channel: "WEB",
-      currency: "USD",
-      pos:"pointb.com"
-    });
+  //   // Send VIEW events
+  //   engage.pageView({
+  //     channel: "WEB",
+  //     currency: "USD",
+  //     pos:"pointb.com"
+  //   });
 
-    console.log("Copy-paste the following line into Sitecore CDP&Personalize, Guests, Search field:");
-    console.log("bid:", engage);
-  };
+    
+  //   console.log("Copy-paste the following line into Sitecore CDP&Personalize, Guests, Search field:");
+  //   console.log("bid:", engage);
+  // };
   
   const sendCustomEvent = async () => {
     // Load Engage API
@@ -78,22 +80,22 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
     //loadEngage();
   }, []);
 
+
   const { route } = layoutData.sitecore;
   const fields = route?.fields as RouteFields;
   const isPageEditing = layoutData.sitecore.context.pageEditing;
   const mainClassPageEditing = isPageEditing ? "editing-mode" : "prod-mode";
   console.log("layoutDataa", layoutData);
 
-  const handleClick = (e: any) => {
-    console.log("Free pizza!");
+  const handleClick = (e: any) => {    
     console.log(e);
-    //sendCustomEvent();
+    sendCustomEvent();
     //callMethod(layoutData.sitecore.route?.name);
   };
   return (
     <>
       <Script
-        src={`${publicUrl}/cdpSettings.js`}
+        //src={`${publicUrl}/cdpSettings.js`}
 
         //onLoad={() => callMethod(layoutData.sitecore.route?.name)    }
       />

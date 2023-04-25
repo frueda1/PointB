@@ -40,6 +40,7 @@ class PersonalizePlugin implements MiddlewarePlugin {
             parseInt(process.env.PERSONALIZE_MIDDLEWARE_CDP_TIMEOUT)) ||
           250,
       },
+      
       // This function determines if the middleware should be turned off.
       // IMPORTANT: You should implement based on your cookie consent management solution of choice.
       // You may wish to keep it disabled while in development mode.
@@ -55,6 +56,7 @@ class PersonalizePlugin implements MiddlewarePlugin {
   }
 
   async exec(req: NextRequest, res?: NextResponse): Promise<NextResponse> {
+    console.log('cdpConfig' );
     return this.personalizeMiddleware.getHandler()(req, res);
   }
 }

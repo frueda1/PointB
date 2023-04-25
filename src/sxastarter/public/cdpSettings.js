@@ -94,12 +94,12 @@ s.addEventListener("load", async () => {
         clientKey: "sndbxus09k4lf0wq2f6b9p25ckpuqo8i",
         targetURL: "https://api-engage-us.sitecorecloud.io",
         pointOfSale: "pointb.com",
-        cookieDomain: "",
+        cookieDomain: "localhost",
         cookieExpiryDays: 365,
         forceServerCookieMode: false,
         includeUTMParameters: true,
-        webPersonalization: "true",
-        web_flow_target: 'https://d35vb5cccm4xzp.cloudfront.net'
+        webPersonalization: true,
+        //web_flow_target: 'https://d35vb5cccm4xzp.cloudfront.net'
     };
     engage = await window.Engage.init(settings);
 
@@ -107,17 +107,17 @@ s.addEventListener("load", async () => {
     // ...
 
     // VIEW event object
-var eventData = {
-    channel: "WEB",
-    language: "EN",
-    currency: "USD",
-    page: "NEW HOME",
-    pointOfSale: "pointb.com"
-};
+// var eventData = {
+//     channel: "WEB",
+//     language: "EN",
+//     currency: "USD",
+//     page: "NEW HOME 2",
+//     pointOfSale: "pointb.com"
+// };
 
-// Send a VIEW event
-engage.pageView(eventData);
-console.log(eventData);
+// // Send a VIEW event
+// engage.pageView(eventData);
+// console.log(eventData);
 
 });
 
