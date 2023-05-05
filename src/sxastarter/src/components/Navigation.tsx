@@ -88,6 +88,7 @@ export const Default = (props: NavigationProps): JSX.Element => {
     ));
 
   return (
+    <>
     <div className={`component navigation ${styles}`} id={id ? id : undefined}>
       <label className="menu-mobile-navigate-wrapper">
         <input
@@ -104,6 +105,7 @@ export const Default = (props: NavigationProps): JSX.Element => {
         </div>
       </label>
     </div>
+        </>
   );
 };
 
