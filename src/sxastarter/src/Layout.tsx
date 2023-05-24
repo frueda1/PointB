@@ -95,7 +95,7 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
   return (
     <>
       <Script
-        //src={`${publicUrl}/cdpSettings.js`}
+        src={`${publicUrl}/cdpSettings.js`}
 
         //onLoad={() => callMethod(layoutData.sitecore.route?.name)    }
       />
@@ -107,7 +107,7 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
       </Head>
 
       {/* root placeholder for the app, which we add components to using route data */}
-      <button onClick={handleClick}>Search</button>
+      {/* <button onClick={handleClick}>Search</button> */}
       <div className={mainClassPageEditing}>
         <header>
           <div id="header">

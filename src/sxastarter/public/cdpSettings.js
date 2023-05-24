@@ -107,17 +107,17 @@ s.addEventListener("load", async () => {
     // ...
 
     // VIEW event object
-// var eventData = {
-//     channel: "WEB",
-//     language: "EN",
-//     currency: "USD",
-//     page: "NEW HOME 2",
-//     pointOfSale: "pointb.com"
-// };
+var eventData = {
+    channel: "WEB",
+    language: "EN",
+    currency: "USD",
+    page: document.title,
+    pointOfSale: "oshyn.com"
+};
 
-// // Send a VIEW event
-// engage.pageView(eventData);
-// console.log(eventData);
+// Send a VIEW event
+engage.pageView(eventData);
+console.log(eventData);
 
 });
 

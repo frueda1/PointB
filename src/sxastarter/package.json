@@ -84,7 +84,7 @@
     "next:dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "next:start": "next start",
     "scaffold": "ts-node --project tsconfig.scripts.json scripts/scaffold-component.ts",
-    "start:connected": "npm-run-all --serial bootstrap --parallel next:dev start:watch-components",
+    "start:connected": "cross-env-shell HTTPS=true NODE_EXTRA_CA_CERTS=C:/Users/pc/AppData/Local/mkcert/rootCA.pem npm-run-all --serial bootstrap --parallel next:dev start:watch-components",
     "start:production": "npm-run-all --serial bootstrap next:build next:start",
     "start:watch-components": "ts-node --project tsconfig.scripts.json scripts/generate-component-factory.ts --watch"
   }
